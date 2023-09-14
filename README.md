@@ -1,8 +1,6 @@
-# React + Vite
+# Contact List
+The goal of this workshop is to learn the fundamentals of data fetching with React. You will build an application that allows us to view a list of contacts and click on a selected contact to gain more details about them. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## deployed site
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://65034b851d2990108db47b9a--rainbow-moonbeam-8bc887.netlify.app/
