@@ -3,8 +3,6 @@ import {useState, useEffect} from 'react'
 export default function SelectedContact({selectedContactId, setSelctedContactId}){
    const [contact,setContact] = useState(null);
    
-   console.log(selectedContactId,"is selectedContactId firing")
-
    useEffect(() => {
     async function fetchContact(){
         try{
@@ -18,13 +16,21 @@ export default function SelectedContact({selectedContactId, setSelctedContactId}
     }
     fetchContact()
 },[])
-//    console.log(contact, "this is supposed to be a contact");
    return(
     <div>
         {contact ? (
-          <div>
-                <p>{contact.name}</p>
-                <button onClick={(()=> setSelctedContactId(null))}> Back</button>
+          <div className='selectContact'>
+                <h2>{contact.name}</h2>
+                <ul>
+                    <li>Email: {contact.email}</li>
+                    <li>Phone: {contact.phone}</li>
+                    <li>Street:{contact.address.street}</li>
+                    <li>Suite: {contact.address.suite}</li>
+                    <li>City: {contact.address.city}</li>
+                    <li>Zipcode: {contact.address.zipcode}</li>
+                    <li>Company: {contact.company.name}</li>
+                </ul>
+                <button onClick={(()=> setSelctedContactId(null))}>Back</button>
           </div>
         ) : (
           <p>No contact found!</p>
