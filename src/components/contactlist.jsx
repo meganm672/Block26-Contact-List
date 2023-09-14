@@ -9,6 +9,7 @@ const dummyContacts = [
   ];
 
 export default function ContactList({setSelectedContactId}){
+    // console.log(setSelectedContactId, "checking setSelectedContactId in setSelectedContactId function")
     const [contacts, setContacts] = useState(dummyContacts);
     
     useEffect(() => {
@@ -40,7 +41,7 @@ export default function ContactList({setSelectedContactId}){
             </tr>
             {
                contacts.map((contact) => {
-                return <ContactRow key={contact.id} contact={contact} />;
+                return <ContactRow setSelectedContactId={setSelectedContactId} key={contact.id} contact={contact} />;
                })
              }
           </tbody>
